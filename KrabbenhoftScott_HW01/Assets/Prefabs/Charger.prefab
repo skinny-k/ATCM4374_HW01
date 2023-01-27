@@ -360,7 +360,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 2
+  _dropsOnDeath: {fileID: 3741460945551847215, guid: 874f1ae18d44148c481074a53e03a80c,
+    type: 3}
+  _chanceToDrop: 1
   _deathSound: {fileID: 8300000, guid: 3e3e3e5716c2533409755571490cc2c4, type: 3}
   _hitSound: {fileID: 8300000, guid: eeb3bcaf9a1e08b4ca2540b8b4157f6b, type: 3}
   MoveSpeed: 0.1
-  _speedModifierPerHit: 1.5
+  _speedModifierPerHit: 2

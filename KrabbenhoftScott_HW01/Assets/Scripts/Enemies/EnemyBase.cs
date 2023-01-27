@@ -6,14 +6,18 @@ using UnityEngine;
 public abstract class EnemyBase : MonoBehaviour
 {
     [SerializeField] private int _health = 3;
+    [SerializeField] GameObject _dropsOnDeath = null;
+    [SerializeField] float _chanceToDrop = 0.5f;
+
     [Header("FX")]
     [SerializeField] private AudioClip _deathSound;
     [SerializeField] private AudioClip _hitSound;
     [SerializeField] protected float MoveSpeed = .05f;
 
-    protected abstract void OnHit();
-
+    protected float MoveModifier = 1f;
     protected Rigidbody RB { get; private set; }
+
+    protected abstract void OnHit();
 
     private void Awake()
     {
@@ -27,7 +31,7 @@ public abstract class EnemyBase : MonoBehaviour
     
     protected virtual void Move()
     {
-        Vector3 moveDelta = transform.forward * MoveSpeed;
+        Vector3 moveDelta = transform.forward * MoveSpeed * MoveModifier;
         RB.MovePosition(RB.position + moveDelta);
     }
 
@@ -49,6 +53,12 @@ public abstract class EnemyBase : MonoBehaviour
     public virtual void Kill()
     {
         AudioHelper.PlayClip2D(_deathSound, 1, .1f);
+
+        if (_dropsOnDeath != null && _chanceToDrop != 0)
+        {
+            Instantiate(_dropsOnDeath, transform.position, Quaternion.identity);
+        }
+
         gameObject.SetActive(false);
     }
 }

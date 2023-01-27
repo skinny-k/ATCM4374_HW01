@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Charger : EnemyBase
 {
+    [Header("Charger Settings")]
     [SerializeField] protected float _speedModifierPerHit = 1.5f;
     
     protected override void OnHit()
     {
-        MoveSpeed *= _speedModifierPerHit;
+        MoveModifier *= _speedModifierPerHit;
     }
 }

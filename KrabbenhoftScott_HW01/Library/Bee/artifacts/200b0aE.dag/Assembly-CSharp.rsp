@@ -373,6 +373,8 @@
 "Assets/Scripts/Input/Clickable.cs"
 "Assets/Scripts/Input/ClickObject.cs"
 "Assets/Scripts/Input/TouchInput.cs"
+"Assets/Scripts/Power Ups/PowerUpBase.cs"
+"Assets/Scripts/Power Ups/RapidFirePowerUp.cs"
 "Assets/Scripts/Turrets/Turret.cs"
 "Assets/Scripts/Turrets/TurretController.cs"
 "Assets/Scripts/Utility/AudioHelper.cs"

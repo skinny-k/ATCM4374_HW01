@@ -9,13 +9,11 @@ public class Turret : MonoBehaviour
 
     public void AttemptFire()
     {
-
         Fire();
     }
 
     public void Fire()
     {
-        Instantiate(_projectileToSpawn, 
-            _projectileSpawnLoc.position, transform.rotation);
+        Instantiate(_projectileToSpawn, _projectileSpawnLoc.position, transform.rotation);
     }
 }

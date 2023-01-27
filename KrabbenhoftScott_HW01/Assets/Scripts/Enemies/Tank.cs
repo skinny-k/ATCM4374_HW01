@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Tank : EnemyBase
 {
+    [Header("Tank Settings")]
     [SerializeField] protected float _waitDurationOnHit = 1f;
     
     protected override void OnHit()
@@ -13,11 +14,10 @@ public class Tank : EnemyBase
 
     IEnumerator ModifySpeed(float duration)
     {
-        float originalSpeed = MoveSpeed;
-        MoveSpeed = 0;
+        MoveModifier = 0;
 
         yield return new WaitForSeconds(duration);
 
-        MoveSpeed = originalSpeed;
+        MoveModifier = 1;
     }
 }
