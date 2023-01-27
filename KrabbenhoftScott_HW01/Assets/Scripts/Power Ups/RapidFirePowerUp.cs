@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RapidFirePowerUp : PowerUpBase
 {
+    [Header("Rapid Fire Power Up Settings")]
     [SerializeField] float _fireCooldownReductionPercentage = 0.5f;
     
     protected override void PowerUp()

@@ -111,4 +111,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _duration: 2
-  _reductionPercentage: 0.5
+  _collectSFX: {fileID: 8300000, guid: 5b797ee3c97827f4ea19c3038ca7a14a, type: 3}
+  _fireCooldownReductionPercentage: 0.5
